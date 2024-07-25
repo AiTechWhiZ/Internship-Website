@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Gudea:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gudea";
+}
+
+main{
+  width: 100%;
+}
+
+.page-header {
+  background-color: red; /* Red background */
+  width: 100%; /* Full width */
+  height: 56px;
+}
+
+.animation{
+  -webkit-transition: color .2s linear, background-color .2s linear, border-color .1s linear, opacity .2s linear, box-shadow .3s linear;
+  transition: color .2s linear, background-color .2s linear, border-color .1s linear, opacity .2s linear, box-shadow .3s linear;
+}

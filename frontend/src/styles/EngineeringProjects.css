@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Gudea&display=swap');
+
+.engineering-projects {
+  padding: 30px;
+  font-family: "Gudea", sans-serif;
+  font-weight: 400;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  animation: fadeInAnimation 1s ease-in forwards; /* Apply animation */
+  opacity: 0; /* Start with opacity 0 for animation */
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.intro {
+  flex: 1;
+  height: 280px;
+  margin-right: 20px; /* Space between intro and carousel */
+}
+
+.intro h2 {
+  font-size: 32px;
+  margin-bottom: 0;
+  color: red;
+  font-weight: 200;
+  margin-top: 10px;
+}
+
+.intro p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  flex: 1;
+  max-width: 280px;
+  border-radius: 40px;
+  border: 1px solid black; /* Adjust width as needed */
+}
+
+.carousel .carousel-image {
+  height: 280px; /* Adjust the height of the carousel images */
+  object-fit: fill; /* Ensure the images cover the entire area */
+}
+
+#main-list {
+  display: flex;
+  justify-content: left;
+  padding-top: 0px;
+  margin-top: 20px;
+  font-size: 25px; /* Make project list text color blue */
+}
+
+.project-list {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(0, 0, 0); /* Make project list text color blue */
+}
+
+.project-column {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-right: 10px;
+}
+
+.project-column h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  width: 400px;
+  font-weight: 300;
+}
+
+.project-column ol {
+  padding: 0px;
+  margin: 0;
+}
+
+.project-column-2{
+    margin-left: 5px;
+}
+
+.col2{
+    margin-right: 0;
+    margin-left: 50px;
+    width: 330px;
+}
+
+.project-column ol li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.email-link {
+  color: black; /* Make the email link color black */
+  text-decoration: none;
+}
+
+.email-link:hover {
+  color: red;
+  -webkit-transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, opacity 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear, border-color 0.2s linear, opacity 0.2s linear;
+}
+
+.page-header {
+  background-color: red;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+}
+
+#main-list h2 {
+  color: #008080;
+  font-weight: 400;
+  margin: 0;
+  padding: 10px;
+}
+
+.column-info {
+  margin-top: 65px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1041px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .intro, .carousel {
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .project-list {
+    flex-direction: column;
+  }
+  .project-column {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .col2{
+    margin-left: 0;
+  }
+
+}
+
+@media (max-width: 693px) {
+  .intro h2 {
+    font-size: 24px;
+  }
+  .intro p {
+    font-size: 14px;
+  }
+  #main-list {
+    font-size: 20px;
+  }
+  .project-column h3 {
+    font-size: 18px;
+  }
+  .project-column ol li {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.main_card {
+    padding: 20px;
+    text-align: center;
+}
+
+.Digital-business-card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    font-family: "Open Sans";
+}
+
+.Digital-business-card .left-column {
+    flex: 1;
+    padding: 20px;
+}
+
+.Digital-business-card .right-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.business-card {
+    max-width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.business-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 45px;
+}
+
+.feature {
+    flex: 1 1 30%;
+    max-width: 30%;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.feature p {
+    margin-top: 10px;
+    color: #333;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.new-section, .pricing-section, .form-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pricing-section {
+    width: 350px;
+    margin-left: 25px;
+}
+
+.new-section h2, .pricing-section h2, .form-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.new-section p, .pricing-section ul, .form-section .form-instructions {
+    font-size: 16px;
+    color: #666;
+}
+
+.pricing-section .price {
+    font-size: 32px;
+    color: #333;
+}
+
+.pricing-section hr {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.pricing-section ul {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    color: #666;
+}
+
+.pricing-section ul li {
+    margin: 5px 0;
+}
+
+.form-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-instructions {
+    flex: 1;
+    margin-right: 20px;
+    text-align: left;
+}
+
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea, form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 1041px) {
+    .feature {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+    .form-container {
+        flex-direction: column;
+    }
+    .form-instructions {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .feature {
+        flex: 1 1 45%;
+    }
+    .form-container {
+        flex-direction: column;
+    }
+    .form-instructions {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 693px) {
+    .Digital-business-card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .Digital-business-card .left-column,
+    .Digital-business-card .right-column {
+        flex: none;
+        max-width: 100%;
+    }
+    .features {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .feature {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .new-section, .pricing-section, .form-section {
+        margin: 10px 0;
+        padding: 10px;
+    }
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    form {
+        width: 100%;
+    }
+    .form-instructions {
+        text-align: center;
+    }
+}
+.page-header {
+    background-color: red;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+.name-image {
+    height: 30px;
+    width: 100px;
+    margin-left: 10px;
+}
+
+.left-column h1 {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: left;
+}
+
+.left-column p {
+    font-size: 22px;
+    font-weight: 300;
+    text-align: left;
+}

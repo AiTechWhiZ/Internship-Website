@@ -1,0 +1,175 @@
+.fourth-division {
+    padding: 50px 0;
+    background: #1a1c1d; /* Background color */
+    color: #f5f5f5; /* Text color */
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.description-box {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    background: #1a1c1d; /* Background color for the description box */
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff; /* Light color for text */
+    font-size: 1.5rem;
+}
+
+.description-box h2 {
+    font-size: 2.5rem; /* Font size for the heading */
+    margin-bottom: 20px;
+    color: #0498a3; /* Color for the heading */
+}
+
+.clients-container {
+    width: 100%; /* Adjust to container width */
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.clients-slider {
+    display: flex;
+    width: calc(400px * 12 + 30px * 12); /* Adjust to the number of clients (6 original + 6 duplicated) */
+    animation: slide-horizontal 20s linear infinite;
+}
+
+.client-item {
+    flex: 0 0 auto; /* Prevent shrinking and allow items to stay at their defined width */
+    width: 400px; /* Width of each client item */
+    text-align: center;
+    margin-right: 30px;
+    color: #f5f5f5; /* Light color for text */
+    background: #1a1c1d; /* Background color for the client item */
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* To position the triangle */
+}
+
+/* Adjust the client-description style if needed */
+.client-description {
+    font-size: 0.875rem; /* Font size for the description */
+    color: #ffffff; /* Color for the description */
+    margin-bottom: 30px; /* Margin below the description */
+    line-height: 1.5em; /* Line height for spacing */
+    text-align: center; /* Center text */
+    background-color: red; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px; /* Padding inside the description box */
+    height: 160px; /* Height of the description box */
+    width: 100%; /* Full width of client item */
+    font-size: 20px; /* Font size */
+    position: relative; /* To position the triangle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* New CSS for the triangle */
+.client-description::after {
+    content: "";
+    position: absolute;
+    bottom: -20px; /* Position the triangle below the description */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent; /* Left border */
+    border-right: 10px solid transparent; /* Right border */
+    border-top: 10px solid red; /* Triangle color matching the background */
+}
+
+.client-logo {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+.client-name {
+    font-size: 1rem; /* Font size for the client name */
+    color: #f5f5f5; /* Color for the client name */
+}
+
+/* Add sliding animation */
+@keyframes slide-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slide-vertical {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+.clients-slider:hover {
+    animation-play-state: paused;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .description-box {
+        padding: 15px;
+    }
+
+    .description-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .client-item {
+        width: 200px;
+        margin-right: 20px;
+    }
+
+    .client-logo {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    .client-name {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 771px) {
+    .clients-container {
+        height: 100%; /* Full height */
+    }
+
+    .clients-slider {
+        flex-direction: column;
+        height: calc(200px * 12); /* Adjust to the number of clients (6 original + 6 duplicated) */
+        width: 100%;
+        animation: slide-vertical 23s linear infinite;
+    }
+
+    .client-item {
+        width: 100%; /* Full width in vertical mode */
+        height: 200px; /* Adjust height */
+        margin-bottom: 25%; /* Margin between items */
+    }
+
+    .client-description {
+        width: auto; /* Auto width in vertical mode */
+        height: auto; /* Auto height in vertical mode */
+        padding: 10px; /* Adjust padding */
+    }
+}
