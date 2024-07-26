@@ -1,40 +1,42 @@
 /* Navbar Styles */
 .navbar {
-  position: sticky;
+  position: fixed; /* Change from sticky to fixed */
   top: 0;
   width: 100%;
   background-color: #000000;
   padding: 10px 15px;
-  z-index: 1000;
+  z-index: 5000;
   height: 110px;
   transition: all 0.3s ease;
 }
 
-.navbar.sticky {
-  background-color: rgba(0, 0, 0, 0.9);
+.navbar.scrolled {
+  background-color: rgb(201, 2, 2);
 }
 
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
 }
 
 .navbar-logo {
   display: flex;
   align-items: center;
-}
-
-.navbar-logo img {
-  width: 240px;
-  height: auto;
-  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.circular-logo {
-  width: 85px;
-  height: 77px;
+.navbar-logo img {
+  transition: all 0.3s ease;
+}
+
+.navbar-logo img.rectangular {
+  width: 240px;
+}
+
+.navbar-logo img.circular {
+  width: 100px;
   border-radius: 50%;
 }
 
@@ -78,6 +80,10 @@
   height: 20px;
 }
 
+.navbar.scrolled .nav-item a.nav-links.active {
+  color: black;
+}
+
 .menu-icon {
   display: none;
   flex-direction: column;
@@ -107,6 +113,13 @@
 
 .menu-icon.open .bar3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+ul.nav-menu {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 1041px) {

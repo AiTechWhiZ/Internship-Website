@@ -1,5 +1,6 @@
 .first-division {
     position: relative;
+    margin-top: 100px;
     height: 100vh;
     overflow: hidden;
     display: flex;
