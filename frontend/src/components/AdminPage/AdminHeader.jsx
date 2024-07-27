@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../../styles/Header.css';
+import '../../styles/AdminHeader.css';
 import LogoRectangular from '../../Images/Logo/rectangularlogo.png';
 import LogoCircular from '../../Images/Logo/circularlogo.png';
 import MobileImage from '../../Images/Logo/name.png';

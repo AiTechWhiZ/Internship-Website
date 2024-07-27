@@ -60,22 +60,25 @@ const Header = () => {
           </div>
           <ul className={`nav-menu ${isOpen ? 'open' : ''}`}>
             <li className="nav-item">
-              <NavLink to="/" className="nav-links" activeClassName="active">Home</NavLink>
+              <NavLink to="/" className="nav-links" activeclassname="active">Home</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/products" className="nav-links" activeClassName="active">Products</NavLink>
+              <NavLink to="/products" className="nav-links" activeclassname="active">Products</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/digital-business-card" className="nav-links" activeClassName="active">Digital Business Card</NavLink>
+              <NavLink to="/digital-business-card" className="nav-links" activeclassname="active">Digital Business Card</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/tech-blog" className="nav-links" activeClassName="active">Tech Blog</NavLink>
+              <NavLink to="/tech-blog" className="nav-links" activeclassname="active">Tech Blog</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/engineering-projects" className="nav-links" activeClassName="active">Engineering Projects</NavLink>
+              <NavLink to="/engineering-projects" className="nav-links" activeclassname="active">Engineering Projects</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/contact-us" className="nav-links" activeClassName="active">Contact Us</NavLink>
+              <NavLink to="/contact-us" className="nav-links" activeclassname="active">Contact Us</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/login" className="nav-links" activeclassname="active">Login</NavLink>
             </li>
           </ul>
         </div>

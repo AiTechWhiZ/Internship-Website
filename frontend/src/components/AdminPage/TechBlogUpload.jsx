@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../../styles/TechBlog.css';
+import AdminSidebar from './AdminSidebar';
+import AdminHeader from './AdminHeader';
+import '../../styles/AdminPanel.css';
+
 
 const TechBlogUpload = () => {
   const [title, setTitle] = useState('');
@@ -43,37 +47,43 @@ const TechBlogUpload = () => {
   };
 
   return (
-    <div className="upload-container">
-      <h2>Upload Tech Blog</h2>
-      <form onSubmit={handleTechBlogUpload}>
-        <input
-          type="text"
-          placeholder="Title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          required
-        />
-        <textarea
-          placeholder="Content"
-          value={content}
-          onChange={(e) => setContent(e.target.value)}
-          required
-        />
-        <input
-          type="file"
-          onChange={handleImageChange}
-          accept="image/png, image/jpeg"
-          required
-        />
-        <input
-          type="date"
-          value={createdAt}
-          onChange={(e) => setCreatedAt(e.target.value)} 
-          required
-        />
-        <button type="submit">Upload</button>
-        {successMessage && <p className="success-message">{successMessage}</p>}
-      </form>
+    <div className="admin-panel">
+      <AdminHeader/>
+        <div className="admin-content">
+          <AdminSidebar/>
+        <div className="upload-container new">
+          <h2>Upload Tech Blog</h2>
+          <form onSubmit={handleTechBlogUpload}>
+            <input
+              type="text"
+              placeholder="Title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              required
+            />
+            <textarea
+              placeholder="Content"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              required
+            />
+            <input
+              type="file"
+              onChange={handleImageChange}
+              accept="image/png, image/jpeg"
+              required
+            />
+            <input
+              type="date"
+              value={createdAt}
+              onChange={(e) => setCreatedAt(e.target.value)} 
+              required
+            />
+            <button type="submit">Upload</button>
+            {successMessage && <p className="success-message">{successMessage}</p>}
+          </form>
+        </div>
+      </div>
     </div>
   );
 };

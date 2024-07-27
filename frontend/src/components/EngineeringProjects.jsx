@@ -9,7 +9,7 @@ const EngineeringProjects = () => {
   return (
     <main>
       <Header />
-      <div className="page-header">Engineering Projects</div>
+      <div className="page-header"></div>
       <div className="engineering-projects">
         <div className="content-wrapper fade-in">
           <div className="intro">
